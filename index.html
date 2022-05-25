@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXCEL</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/8435f56767.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div>
+        <img src="Imagen1.png" >
+        <img src="lxlab.png" id="lxlab">
+        <h1 id="title">Curso rápido de EXCEL</h1>
+        <p>Instrucciones:</p>
+        <li>En el recuadro debajo, pulsaras a Ir a sheets en donde ingresaras con tú cuenta de google o gmail</li>
+        <li>Generaras un documento en excel y posterior a eso daras en compartir</li>
+        <li>Generaras un URL, volveras al curso y introduciras en el recuadro, pulsaras capturar y, después empeza</li>
+        
+        <textarea class="from-text" placeholder="URL"></textarea>
+        
+        <input class="button"
+        onclick="mostrarMensaje1()" 
+        type="button"
+        value="Empezar">
+
+        <button class="botones" id="botones">Capturar</button>
+        <div>
+            <div id="No" class="container"></div>
+            <iframe width="670" 
+            height="400" src="https://www.youtube.com/embed/CMrlwPXCY8U" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
+            <iframe class="video responsive"
+            id="miIframe"
+            src="https://www.google.com/intl/es-419_mx/sheets/about/"
+            name="iframe_a"
+            height="400px"
+            width="600px"></iframe></div>
+    
+
+        <script type="text/javascript">
+            data=[]
+            const fromText=document.querySelector(".from-text")
+            translateBtn=document.querySelector(".botones")
+            translateBtn.addEventListener("click",()=>{
+                let text=fromText.value;
+                data.push(text)
+                console.log(data)
+            })
+            function mostrarMensaje1(){
+                document.getElementById("miIframe").src=`${data}`
+                document.getElementById('No').style.display='block';
+            }
+        </script>
+    </div>
+</body>
+</html>
