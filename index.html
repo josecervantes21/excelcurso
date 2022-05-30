@@ -48,14 +48,6 @@
                 docs="https://docs.google.com/"
                 let text=fromText.value;
                 data.push(text)
-                for (let i = 0; i < data.length; i++) {
-                    if(text.includes(docs)){
-                        console.log(data)
-                    }
-                    else{
-                        console.log("prueba con otro")
-                    }
-                }
             })
             function mostrarMensaje1(){
                 document.getElementById("miIframe").src=`${data}`
