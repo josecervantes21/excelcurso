@@ -27,7 +27,7 @@
         <div>
             <div id="No" class="container"></div>
             <iframe width="670" 
-            height="400" src="https://www.youtube.com/embed/CMrlwPXCY8U" 
+            height="400" src="https://www.youtube.com/embed/QIAAbHVawF8" 
             title="YouTube video player" 
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -45,9 +45,17 @@
             const fromText=document.querySelector(".from-text")
             translateBtn=document.querySelector(".botones")
             translateBtn.addEventListener("click",()=>{
+                docs="https://docs.google.com/"
                 let text=fromText.value;
                 data.push(text)
-                console.log(data)
+                for (let i = 0; i < data.length; i++) {
+                    if(text.includes(docs)){
+                        console.log(data)
+                    }
+                    else{
+                        console.log("prueba con otro")
+                    }
+                }
             })
             function mostrarMensaje1(){
                 document.getElementById("miIframe").src=`${data}`
@@ -57,3 +65,4 @@
     </div>
 </body>
 </html>
+
